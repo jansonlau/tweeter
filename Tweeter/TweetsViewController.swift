@@ -23,7 +23,7 @@ class TweetsViewController: UIViewController {
                 print(tweet.text!)
             }
         }, failure: { (error: Error) in
-            print("Error: \(error.localizedDescription)")
+            print("Error TweetsVC: \(error.localizedDescription)")
         })
         
         // Get current account
@@ -46,4 +46,7 @@ class TweetsViewController: UIViewController {
     }
     */
 
+//    @IBAction func onLogoutButton(_ sender: Any) {
+//        TwitterClient.sharedInstance?.logout()
+//    }
 }

@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
             self.performSegue(withIdentifier: "loginSegue", sender: nil)
             
         }, failure: { (error: Error) in
-            print("Error: \(error.localizedDescription)")
+            print("Error LoginVC: \(error.localizedDescription)")
         })
     }
 }

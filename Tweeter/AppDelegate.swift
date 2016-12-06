@@ -20,9 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if User.currentUser != nil {
             print("There is a current user")
-        } else {
-            print("There is no current user")
+            
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            
+//            let vc = storyboard.instantiateViewController(withIdentifier: "TweetsNavigationController")
+//            
+//            window?.rootViewController = vc
         }
+        
+//        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "UserDidLogout"), object: nil, queue: OperationQueue.main, using: (Notification) -> Void in)
         
         return true
     }

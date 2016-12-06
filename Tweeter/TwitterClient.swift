@@ -12,7 +12,7 @@ import BDBOAuth1Manager
 class TwitterClient: BDBOAuth1SessionManager {
     
     ///// Variables /////
-    static let sharedInstance = TwitterClient(baseURL: NSURL(string: "https://api.twitter.com")! as URL!, consumerKey: "Sa3Gcd1bGfhOSs7RtvB29M3E7", consumerSecret: "qT5Zqsu39Gwu9z8xTpswlL7F8C53AYMEPh88h30UQyY7kt7TKY")
+    static let sharedInstance = TwitterClient(baseURL: NSURL(string: "https://api.twitter.com")! as URL!, consumerKey: "BNCoMewSq5ed62jqhHtEuLrye", consumerSecret: "YR5i7ppZLEoAXbYLGFnf2cBw2A5kwLSyxsLE3ynD02hWpd5KXq")
     
     var loginSuccess: (() -> ())?
     
@@ -69,7 +69,7 @@ class TwitterClient: BDBOAuth1SessionManager {
             print("Requesting token URL")
             
         }, failure: { (error: Error?) in
-            print("Error: \(error?.localizedDescription)")
+            print("Error TwitterClient1: \(error?.localizedDescription)")
             self.loginFailure?(error!)
         })
     }
@@ -92,8 +92,15 @@ class TwitterClient: BDBOAuth1SessionManager {
             print("Login successful")
             
         }, failure: { (error: Error?) in
-            print("Error: \(error?.localizedDescription)")
+            print("Error TwitterClient2: \(error?.localizedDescription)")
             self.loginFailure?(error!)
         })
     }
+    
+//    func logout() {
+//        User.currentUser = nil
+//        deauthorize()
+//        
+//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "UserDidLogout"), object: nil)
+//    }
 }

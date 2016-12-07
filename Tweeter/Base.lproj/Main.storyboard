@@ -35,7 +35,7 @@
                                     <action selector="onLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wVn-Ug-UCy"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="F5O-8b-A6Y">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="F5O-8b-A6Y">
                                 <rect key="frame" x="108" y="140" width="158" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="jeE-sY-VdJ"/>
@@ -183,42 +183,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6F-1v-7ID">
-                                <rect key="frame" x="151" y="527" width="74" height="30"/>
-                                <state key="normal" title="Take a pic!"/>
-                                <connections>
-                                    <action selector="takePictureAction:" destination="tpY-FY-wY9" eventType="touchUpInside" id="0zd-6B-Nb9"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="39P-dB-zP1">
-                                <rect key="frame" x="0.0" y="110" width="375" height="326"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="39P-dB-zP1">
+                                <rect key="frame" x="1" y="64" width="374" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="374" id="7GF-yZ-WXQ"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clb-D2-Les">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clb-D2-Les">
                                 <rect key="frame" x="22" y="20" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oV-fV-W3L">
-                                <rect key="frame" x="142" y="600" width="92" height="30"/>
+                                <rect key="frame" x="22" y="617" width="92" height="30"/>
                                 <state key="normal" title="Photo Library"/>
                                 <connections>
                                     <action selector="showPhotosAction:" destination="tpY-FY-wY9" eventType="touchUpInside" id="ptq-fp-WOt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6F-1v-7ID">
+                                <rect key="frame" x="285" y="617" width="74" height="30"/>
+                                <state key="normal" title="Take a pic!"/>
+                                <connections>
+                                    <action selector="takePictureAction:" destination="tpY-FY-wY9" eventType="touchUpInside" id="0zd-6B-Nb9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="39P-dB-zP1" firstAttribute="centerX" secondItem="P6F-1v-7ID" secondAttribute="centerX" id="9Ce-se-c3g"/>
-                            <constraint firstItem="4oV-fV-W3L" firstAttribute="top" secondItem="P6F-1v-7ID" secondAttribute="bottom" constant="43" id="LRR-sc-86G"/>
-                            <constraint firstAttribute="trailing" secondItem="39P-dB-zP1" secondAttribute="trailing" id="Wgd-NX-qkc"/>
-                            <constraint firstItem="39P-dB-zP1" firstAttribute="leading" secondItem="ZeU-22-Cnc" secondAttribute="leading" id="Y4B-ab-umT"/>
-                            <constraint firstItem="39P-dB-zP1" firstAttribute="top" secondItem="F8D-xe-FdL" secondAttribute="bottom" constant="46" id="Z4D-6c-1NP"/>
-                            <constraint firstItem="KKP-no-QZf" firstAttribute="top" secondItem="4oV-fV-W3L" secondAttribute="bottom" constant="37" id="hLB-Wr-CCs"/>
-                            <constraint firstItem="P6F-1v-7ID" firstAttribute="top" secondItem="39P-dB-zP1" secondAttribute="bottom" constant="91" id="sgg-dR-fdN"/>
-                            <constraint firstItem="P6F-1v-7ID" firstAttribute="centerX" secondItem="4oV-fV-W3L" secondAttribute="centerX" id="wxN-ZR-RHS"/>
+                            <constraint firstItem="clb-D2-Les" firstAttribute="leading" secondItem="ZeU-22-Cnc" secondAttribute="leadingMargin" constant="6" id="1Vf-Bv-L74"/>
+                            <constraint firstItem="39P-dB-zP1" firstAttribute="centerX" secondItem="ZeU-22-Cnc" secondAttribute="centerX" id="7sc-0s-AmU"/>
+                            <constraint firstAttribute="bottom" secondItem="4oV-fV-W3L" secondAttribute="bottom" constant="20" symbolic="YES" id="9Kj-2q-Jzd"/>
+                            <constraint firstAttribute="trailing" secondItem="39P-dB-zP1" secondAttribute="trailing" id="A5x-uz-g4h"/>
+                            <constraint firstItem="4oV-fV-W3L" firstAttribute="baseline" secondItem="P6F-1v-7ID" secondAttribute="baseline" id="CSI-qO-oFM"/>
+                            <constraint firstItem="P6F-1v-7ID" firstAttribute="trailing" secondItem="ZeU-22-Cnc" secondAttribute="trailingMargin" id="H96-m0-nzE"/>
+                            <constraint firstItem="clb-D2-Les" firstAttribute="top" secondItem="ZeU-22-Cnc" secondAttribute="top" constant="20" symbolic="YES" id="iwB-66-rQb"/>
+                            <constraint firstItem="clb-D2-Les" firstAttribute="leading" secondItem="4oV-fV-W3L" secondAttribute="leading" id="sGz-6X-vK3"/>
+                            <constraint firstItem="39P-dB-zP1" firstAttribute="top" secondItem="F8D-xe-FdL" secondAttribute="bottom" id="zLr-yv-054"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="LKH-tY-8f0"/>
+                    <navigationItem key="navigationItem" id="LKH-tY-8f0">
+                        <barButtonItem key="rightBarButtonItem" title="Clear" id="OcH-a1-riL">
+                            <connections>
+                                <action selector="clearPhoto:" destination="tpY-FY-wY9" id="Cjd-6t-eXQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="photoImageView" destination="39P-dB-zP1" id="kkM-j0-2bc"/>
                         <outlet property="photosButton" destination="4oV-fV-W3L" id="z8M-w4-pxx"/>
@@ -227,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qmc-4n-dWS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2580" y="124"/>
+            <point key="canvasLocation" x="2580" y="123.68815592203899"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="khw-8j-3Rs">

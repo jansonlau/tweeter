@@ -29,6 +29,9 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func clearPhoto(_ sender: Any) {
+        photoImageView.image = nil 
+    }
 
     /*
     // MARK: - Navigation
@@ -42,7 +45,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBAction func takePictureAction(_ sender: Any) {
         let vc = UIImagePickerController()
         vc.delegate = self
-        vc.allowsEditing = false
+        vc.allowsEditing = true
         vc.sourceType = .camera
         vc.modalPresentationStyle = .fullScreen
         
@@ -52,14 +55,14 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBAction func showPhotosAction(_ sender: Any) {
         let vc = UIImagePickerController()
         vc.delegate = self
-        vc.allowsEditing = false
+        vc.allowsEditing = true
         vc.sourceType = .photoLibrary
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let photo = info[UIImagePickerControllerOriginalImage] as? UIImage
+        let photo = info[UIImagePickerControllerEditedImage] as? UIImage
         self.photoImageView.image = photo
         self.dismiss(animated: true, completion: nil)
         let defaults = UserDefaults.standard

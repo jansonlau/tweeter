@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NSDate_TimeAgo
 
 class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -25,7 +26,6 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
              
             for tweet in tweets {
                 print(tweet.text!)
-//                print(tweet.)
             }
             
             
@@ -69,6 +69,14 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 cell.profileImageView.image = UIImage(data:data! as Data)
             }
         }
+        
+        // Time ago date
+        let date = tweet.timestamp! as NSDate
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.medium
+        //let dateyString = dateFormatter.stringFromDate(datey)
+        let dateRelative = date.dateTimeAgo()
+        cell.hoursAgoLabel.text = dateRelative
         
         return cell 
     }

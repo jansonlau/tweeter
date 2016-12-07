@@ -12,7 +12,7 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var tweetTableView: UITableView!
     
-    var tweets: [Tweet]!
+    var tweets : [Tweet] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +25,16 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
              
             for tweet in tweets {
                 print(tweet.text!)
-
+//                print(tweet.)
             }
+            
+            
+            self.tweetTableView.reloadData()
         }, failure: { (error: Error) in
             print("Error TweetsVC: \(error.localizedDescription)")
         })
+        
+        
         
     }
 
@@ -39,9 +44,25 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        return tweets.count 
     }
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TweetCell", for: indexPath) as! TweetCell
+        let tweet = tweets[indexPath.row]
+        
+        // Tweet body
+        cell.tweetLabel.text = tweets[indexPath.row].text as String?
+        
+        // Username
+        let userParticular = tweet.author
+        cell.usernameLabel.text = userParticular?.name as String?
+        cell.screennameLabel.text = "@\((userParticular?.screenname)! as String)"
+        
+        
+        
+        return cell 
     }
 
     /*

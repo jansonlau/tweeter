@@ -10,13 +10,11 @@ import UIKit
 
 class TweetCell: UITableViewCell {
 
+    @IBOutlet weak var tweetLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var screennameLabel: UILabel!
+    @IBOutlet weak var hoursAgoLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var handleLabel: UILabel!
-    @IBOutlet weak var tweetBodyLabel: UILabel!
-    @IBOutlet weak var timeAgoLabel: UILabel!
-    
-    
     
     
     override func awakeFromNib() {

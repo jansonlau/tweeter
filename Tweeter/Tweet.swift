@@ -13,6 +13,8 @@ class Tweet: NSObject {
     var timestamp: NSDate?
     var retweetCount: Int = 0
     var favoritesCount: Int = 0
+    var author: User?
+    
     
     init(dictionary: NSDictionary) {
         text = dictionary["text"] as? NSString
@@ -20,6 +22,9 @@ class Tweet: NSObject {
         retweetCount = (dictionary["retweet_count"] as? Int) ?? 0 // If retweetCount exists, use it. Otherwise use 0
         
         favoritesCount = (dictionary["favourites_count"] as? Int) ?? 0
+        
+        let userDict = dictionary["user"] as? NSDictionary
+        author = User(dictionary: userDict!)
         
         let timestampString = dictionary["created_at"] as? String
         

@@ -13,6 +13,7 @@
 		185682CB1DF66CAD001689FF /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185682CA1DF66CAD001689FF /* TwitterClient.swift */; };
 		185682CD1DF6A63B001689FF /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185682CC1DF6A63B001689FF /* TweetsViewController.swift */; };
 		187C41DB1DF795C800C10B85 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C41DA1DF795C800C10B85 /* TweetCell.swift */; };
+		187C41DE1DF7B83700C10B85 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C41DD1DF7B83700C10B85 /* PhotoViewController.swift */; };
 		18A2DE741DF5071300C9FB12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2DE731DF5071300C9FB12 /* AppDelegate.swift */; };
 		18A2DE791DF5071400C9FB12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A2DE771DF5071400C9FB12 /* Main.storyboard */; };
 		18A2DE7B1DF5071400C9FB12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A2DE7A1DF5071400C9FB12 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		185682CA1DF66CAD001689FF /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
 		185682CC1DF6A63B001689FF /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
 		187C41DA1DF795C800C10B85 /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		187C41DD1DF7B83700C10B85 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		18A2DE701DF5071300C9FB12 /* Tweeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tweeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A2DE731DF5071300C9FB12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A2DE781DF5071400C9FB12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				18A2DE851DF5129F00C9FB12 /* LoginViewController.swift */,
 				185682CC1DF6A63B001689FF /* TweetsViewController.swift */,
+				187C41DD1DF7B83700C10B85 /* PhotoViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				TargetAttributes = {
 					18A2DE6F1DF5071300C9FB12 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 339A4E4FGY;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -263,6 +267,7 @@
 				185682C91DF653A3001689FF /* Tweet.swift in Sources */,
 				18A2DE861DF5129F00C9FB12 /* LoginViewController.swift in Sources */,
 				185682CD1DF6A63B001689FF /* TweetsViewController.swift in Sources */,
+				187C41DE1DF7B83700C10B85 /* PhotoViewController.swift in Sources */,
 				185682CB1DF66CAD001689FF /* TwitterClient.swift in Sources */,
 				18A2DE741DF5071300C9FB12 /* AppDelegate.swift in Sources */,
 			);
@@ -388,6 +393,8 @@
 			baseConfigurationReference = B9CC01CBBECA2CC406669474 /* Pods-Tweeter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 339A4E4FGY;
 				INFOPLIST_FILE = Tweeter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jansonlau.Tweeter;
@@ -401,6 +408,8 @@
 			baseConfigurationReference = 6EE6FBA0825B303A9E23BA16 /* Pods-Tweeter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 339A4E4FGY;
 				INFOPLIST_FILE = Tweeter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jansonlau.Tweeter;

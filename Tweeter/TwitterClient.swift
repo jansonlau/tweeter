@@ -35,6 +35,21 @@ class TwitterClient: BDBOAuth1SessionManager {
         })
     }
     
+//    func getFollowers(screenname: String, success: ([Dictionary]) -> (), failure: (Error) -> ())
+//    {
+//        get("1.1/followers/list.json?screen_name=\(screenname)", parameters: nil, progress: nil, success: { (task: URLSessionDataTask, response: AnyObject?) in
+//            let dictionaries = response as! Dictionary
+//            
+//            let users = dictionaries["users"] as! [Dictionary]
+//            
+//            success(users)
+//        
+//        }, failure: { (task: URLSessionDataTask?, error: Error) -> Void in
+//            failure(error)
+//        })
+//        
+//    }
+    
     ///// Current Account /////
     func currentAccount(success: @escaping (User) -> (), failure: @escaping (Error) -> ()) {
         ///// User info is printed out as "response" /////

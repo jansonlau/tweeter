@@ -80,6 +80,29 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         return cell 
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination.restorationIdentifier == "DetailViewController" {
+            let vc = segue.destination as! DetailViewController
+            let indexPath1 = tweetTableView.indexPath(for: sender as! TweetCell)
+            let tweety = self.tweets[indexPath1!.row]
+            
+            //Send tweet
+            vc.textFromSegue = tweety.text as String?
+            
+            //Send pic
+            let user = tweety.author
+            let picURL = user?.profileUrl
+            let data = NSData(contentsOf:picURL! as URL)
+            
+            if data != nil {
+                let picImage = UIImage(data:data! as Data)
+                vc.profilePicFromSegue = picImage
+            }
+            //Send username
+            vc.usernameFromSegue = user?.name as String?
+        }
+    }
 
     /*
     // MARK: - Navigation

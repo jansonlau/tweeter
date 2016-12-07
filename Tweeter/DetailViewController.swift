@@ -1,20 +1,31 @@
 //
-//  LoginViewController.swift
+//  DetailViewController.swift
 //  Tweeter
 //
-//  Created by Janson Lau on 12/4/16.
+//  Created by Janson Lau on 12/7/16.
 //  Copyright © 2016 Janson Lau. All rights reserved.
 //
 
 import UIKit
-import BDBOAuth1Manager
 
-class LoginViewController: UIViewController {
+class DetailViewController: UIViewController {
+    @IBOutlet weak var profilePicImage: UIImageView!
+    @IBOutlet weak var tweetTextLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
 
+    var textFromSegue : String?
+    var profilePicFromSegue:UIImage?
+    var usernameFromSegue : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("Text from segue \(textFromSegue)")
 
         // Do any additional setup after loading the view.
+        tweetTextLabel.text = textFromSegue
+        profilePicImage.image = profilePicFromSegue
+        usernameLabel.text = usernameFromSegue
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,14 +44,4 @@ class LoginViewController: UIViewController {
     }
     */
 
-    @IBAction func onLoginButton(_ sender: Any) {
-        TwitterClient.sharedInstance?.login(success: {
-            
-            print("Logged in")
-            self.performSegue(withIdentifier: "loginSegue", sender: nil)
-            
-        }, failure: { (error: Error) in
-            print("Error LoginVC: \(error.localizedDescription)")
-        })
-    }
 }

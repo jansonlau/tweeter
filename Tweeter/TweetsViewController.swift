@@ -60,7 +60,15 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.usernameLabel.text = userParticular?.name as String?
         cell.screennameLabel.text = "@\((userParticular?.screenname)! as String)"
         
-        
+        // Profile image
+        if let profilePicURL = userParticular!.profileUrl {
+            
+            
+            let data = NSData(contentsOf:profilePicURL as URL)
+            if data != nil {
+                cell.profileImageView.image = UIImage(data:data! as Data)
+            }
+        }
         
         return cell 
     }

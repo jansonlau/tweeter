@@ -87,6 +87,17 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let indexPath1 = tweetTableView.indexPath(for: sender as! TweetCell)
             let tweety = self.tweets[indexPath1!.row]
             
+            //Send likes count
+            vc.likeCountFromSegue = tweety.favoritesCount
+            print("favoritesCount")
+            print(tweety.favoritesCount)
+            //Send rt count
+            print("RT")
+
+            print(tweety.retweetCount)
+
+            vc.rtCountFromSegue = tweety.retweetCount
+            
             //Send tweet
             vc.textFromSegue = tweety.text as String?
             

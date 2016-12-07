@@ -12,10 +12,14 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var profilePicImage: UIImageView!
     @IBOutlet weak var tweetTextLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var likeCountLabel: UILabel!
+    @IBOutlet weak var rtCountLabel: UILabel!
 
     var textFromSegue : String?
     var profilePicFromSegue:UIImage?
     var usernameFromSegue : String?
+    var rtCountFromSegue:Int?
+    var likeCountFromSegue : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +30,8 @@ class DetailViewController: UIViewController {
         tweetTextLabel.text = textFromSegue
         profilePicImage.image = profilePicFromSegue
         usernameLabel.text = usernameFromSegue
+        likeCountLabel.text = "\(likeCountFromSegue!)"
+        rtCountLabel.text = "\(rtCountFromSegue!)"
     }
 
     override func didReceiveMemoryWarning() {

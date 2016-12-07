@@ -15,7 +15,12 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let defaults = UserDefaults.standard
+        
+        let photo = defaults.data(forKey: "photo")
+        if(photo != nil) {
+            photoImageView.image = UIImage(data: photo!)
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -54,7 +59,11 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        self.photoImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        let photo = info[UIImagePickerControllerOriginalImage] as? UIImage
+        self.photoImageView.image = photo
         self.dismiss(animated: true, completion: nil)
+        let defaults = UserDefaults.standard
+        defaults.set(UIImageJPEGRepresentation(photo!, 1.0), forKey: "photo")
+        defaults.synchronize()
     }
 }

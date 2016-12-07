@@ -8,12 +8,16 @@
 
 import UIKit
 
-class TweetsViewController: UIViewController {
-
+class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tweetTableView: UITableView!
+    
     var tweets: [Tweet]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tweetTableView.delegate = self
+        tweetTableView.dataSource = self
         
         // Get home timeline
         TwitterClient.sharedInstance?.homeTimeline(success: { (tweets: [Tweet]) in
@@ -21,13 +25,12 @@ class TweetsViewController: UIViewController {
              
             for tweet in tweets {
                 print(tweet.text!)
+
             }
         }, failure: { (error: Error) in
             print("Error TweetsVC: \(error.localizedDescription)")
         })
         
-        // Get current account
-//        TwitterClient.sharedInstance?.currentAccount()
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,6 +38,11 @@ class TweetsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    }
 
     /*
     // MARK: - Navigation

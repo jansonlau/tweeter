@@ -26,7 +26,7 @@
                                 <rect key="frame" x="16" y="435" width="343" height="37"/>
                                 <color key="backgroundColor" red="0.0039648576639592648" green="0.60692834854125977" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="8Ej-fm-JbK"/>
+                                    <constraint firstAttribute="height" constant="37" id="DKx-kJ-GWp"/>
                                 </constraints>
                                 <state key="normal" title="Log in with Twitter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,18 +38,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="F5O-8b-A6Y">
                                 <rect key="frame" x="108" y="140" width="158" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="jeE-sY-VdJ"/>
+                                    <constraint firstAttribute="height" constant="128" id="Cas-lQ-aXz"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.4039215686" green="0.03605555421" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dv4-4y-L0m" secondAttribute="bottom" constant="195" id="39w-nc-Uaz"/>
-                            <constraint firstItem="F5O-8b-A6Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="92" id="4fC-ux-w5k"/>
-                            <constraint firstItem="Dv4-4y-L0m" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fZH-uX-iIO"/>
-                            <constraint firstItem="Dv4-4y-L0m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iW8-nP-qmO"/>
-                            <constraint firstItem="F5O-8b-A6Y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="owJ-mT-G9s"/>
-                            <constraint firstItem="F5O-8b-A6Y" firstAttribute="centerX" secondItem="Dv4-4y-L0m" secondAttribute="centerX" id="s0T-ux-cH5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dv4-4y-L0m" secondAttribute="bottom" constant="195" id="214-2T-XBy"/>
+                            <constraint firstItem="Dv4-4y-L0m" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4D5-0Q-NKo"/>
+                            <constraint firstItem="Dv4-4y-L0m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BaA-Z6-gpR"/>
+                            <constraint firstItem="F5O-8b-A6Y" firstAttribute="centerX" secondItem="Dv4-4y-L0m" secondAttribute="centerX" id="DMa-6o-6Kj"/>
+                            <constraint firstItem="F5O-8b-A6Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="92" id="KwJ-7k-Qms"/>
+                            <constraint firstItem="F5O-8b-A6Y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="zjP-KL-JaI"/>
                         </constraints>
                     </view>
                     <connections>
@@ -72,9 +72,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zgW-tr-T71">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zgW-tr-T71">
                                 <rect key="frame" x="0.0" y="28" width="375" height="639"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="105" id="zpt-cL-rmz" customClass="TweetCell" customModule="Tweeter" customModuleProvider="target">
@@ -155,6 +154,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zgW-tr-T71" firstAttribute="leading" secondItem="M03-BK-XI8" secondAttribute="leading" id="WUC-00-kNg"/>
+                            <constraint firstItem="zgW-tr-T71" firstAttribute="top" secondItem="M03-BK-XI8" secondAttribute="topMargin" constant="28" id="iHO-SO-PbF"/>
+                            <constraint firstAttribute="trailing" secondItem="zgW-tr-T71" secondAttribute="trailing" id="jL8-XL-G27"/>
+                            <constraint firstItem="zgW-tr-T71" firstAttribute="bottom" secondItem="beu-zU-iHT" secondAttribute="top" id="lfR-Y3-jBy"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OnX-ye-gqV">
                         <barButtonItem key="rightBarButtonItem" title="Camera" id="GUs-CZ-Ive">
@@ -183,12 +188,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="39P-dB-zP1">
-                                <rect key="frame" x="1" y="64" width="374" height="374"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="374" id="7GF-yZ-WXQ"/>
-                                </constraints>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6F-1v-7ID">
+                                <rect key="frame" x="285" y="617" width="74" height="30"/>
+                                <state key="normal" title="Take a pic!"/>
+                                <connections>
+                                    <action selector="takePictureAction:" destination="tpY-FY-wY9" eventType="touchUpInside" id="0zd-6B-Nb9"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clb-D2-Les">
                                 <rect key="frame" x="22" y="20" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
@@ -200,25 +206,22 @@
                                     <action selector="showPhotosAction:" destination="tpY-FY-wY9" eventType="touchUpInside" id="ptq-fp-WOt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6F-1v-7ID">
-                                <rect key="frame" x="285" y="617" width="74" height="30"/>
-                                <state key="normal" title="Take a pic!"/>
-                                <connections>
-                                    <action selector="takePictureAction:" destination="tpY-FY-wY9" eventType="touchUpInside" id="0zd-6B-Nb9"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="39P-dB-zP1">
+                                <rect key="frame" x="0.0" y="146" width="374" height="374"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="clb-D2-Les" firstAttribute="leading" secondItem="ZeU-22-Cnc" secondAttribute="leadingMargin" constant="6" id="1Vf-Bv-L74"/>
-                            <constraint firstItem="39P-dB-zP1" firstAttribute="centerX" secondItem="ZeU-22-Cnc" secondAttribute="centerX" id="7sc-0s-AmU"/>
-                            <constraint firstAttribute="bottom" secondItem="4oV-fV-W3L" secondAttribute="bottom" constant="20" symbolic="YES" id="9Kj-2q-Jzd"/>
-                            <constraint firstAttribute="trailing" secondItem="39P-dB-zP1" secondAttribute="trailing" id="A5x-uz-g4h"/>
-                            <constraint firstItem="4oV-fV-W3L" firstAttribute="baseline" secondItem="P6F-1v-7ID" secondAttribute="baseline" id="CSI-qO-oFM"/>
-                            <constraint firstItem="P6F-1v-7ID" firstAttribute="trailing" secondItem="ZeU-22-Cnc" secondAttribute="trailingMargin" id="H96-m0-nzE"/>
-                            <constraint firstItem="clb-D2-Les" firstAttribute="top" secondItem="ZeU-22-Cnc" secondAttribute="top" constant="20" symbolic="YES" id="iwB-66-rQb"/>
-                            <constraint firstItem="clb-D2-Les" firstAttribute="leading" secondItem="4oV-fV-W3L" secondAttribute="leading" id="sGz-6X-vK3"/>
-                            <constraint firstItem="39P-dB-zP1" firstAttribute="top" secondItem="F8D-xe-FdL" secondAttribute="bottom" id="zLr-yv-054"/>
+                            <constraint firstItem="clb-D2-Les" firstAttribute="leading" secondItem="ZeU-22-Cnc" secondAttribute="leadingMargin" constant="6" id="4ql-2k-ZKI"/>
+                            <constraint firstItem="P6F-1v-7ID" firstAttribute="trailing" secondItem="ZeU-22-Cnc" secondAttribute="trailingMargin" id="BkJ-IV-cUa"/>
+                            <constraint firstItem="39P-dB-zP1" firstAttribute="centerX" secondItem="ZeU-22-Cnc" secondAttribute="centerX" id="DOs-9g-t2e"/>
+                            <constraint firstAttribute="bottom" secondItem="4oV-fV-W3L" secondAttribute="bottom" constant="20" symbolic="YES" id="FKS-7U-aaJ"/>
+                            <constraint firstItem="4oV-fV-W3L" firstAttribute="baseline" secondItem="P6F-1v-7ID" secondAttribute="baseline" id="Hj8-dJ-tFe"/>
+                            <constraint firstItem="clb-D2-Les" firstAttribute="leading" secondItem="4oV-fV-W3L" secondAttribute="leading" id="MLn-i0-kEM"/>
+                            <constraint firstItem="39P-dB-zP1" firstAttribute="top" secondItem="F8D-xe-FdL" secondAttribute="bottom" constant="82" id="eBa-ve-Qth"/>
+                            <constraint firstItem="clb-D2-Les" firstAttribute="top" secondItem="ZeU-22-Cnc" secondAttribute="top" constant="20" symbolic="YES" id="q7P-9Q-Lq5"/>
+                            <constraint firstItem="39P-dB-zP1" firstAttribute="centerY" secondItem="ZeU-22-Cnc" secondAttribute="centerY" id="sdJ-Iu-Rp7"/>
+                            <constraint firstItem="39P-dB-zP1" firstAttribute="leading" secondItem="ZeU-22-Cnc" secondAttribute="leading" id="tNn-VJ-8aM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LKH-tY-8f0">
